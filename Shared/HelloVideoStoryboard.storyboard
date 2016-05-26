@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="5oM-B3-hpA">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="cqE-9E-J4I">
+            <objects>
+                <navigationController id="5oM-B3-hpA" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="uGf-uy-Aay">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="his-NW-nJg" kind="relationship" relationship="rootViewController" id="b03-Jp-rKN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GIh-fF-vQP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-35" y="296"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="N6q-Pg-O1t">
+            <objects>
+                <viewController id="his-NW-nJg" customClass="HGCViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4yx-FT-Nyp"/>
+                        <viewControllerLayoutGuide type="bottom" id="FJE-Hq-Um8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="geY-dz-ncX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Google Cast Tamil TVs" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gwN-K4-hJv">
+                                <rect key="frame" x="56" y="128" width="241" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fUK-LX-60b">
+                                <rect key="frame" x="39" y="201" width="33" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="KTV">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="castVideo:" destination="his-NW-nJg" eventType="touchUpInside" id="EQf-f9-Mrt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fwv-XB-ycg">
+                                <rect key="frame" x="30" y="253" width="51" height="30"/>
+                                <state key="normal" title="VijayTV"/>
+                                <connections>
+                                    <action selector="vijayTV:" destination="his-NW-nJg" eventType="touchUpInside" id="jWA-3k-icI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gwN-K4-hJv" firstAttribute="top" secondItem="4yx-FT-Nyp" secondAttribute="bottom" constant="64" id="0ZS-n4-WJo"/>
+                            <constraint firstItem="Fwv-XB-ycg" firstAttribute="top" secondItem="fUK-LX-60b" secondAttribute="bottom" constant="19" id="HV3-jT-cZu"/>
+                            <constraint firstAttribute="centerY" secondItem="fUK-LX-60b" secondAttribute="centerY" constant="116" id="KkL-Hz-z2E"/>
+                            <constraint firstAttribute="centerX" secondItem="fUK-LX-60b" secondAttribute="centerX" constant="132" id="ekK-Ji-BaS"/>
+                            <constraint firstItem="Fwv-XB-ycg" firstAttribute="centerX" secondItem="fUK-LX-60b" secondAttribute="centerX" id="fwA-Jv-fdz"/>
+                            <constraint firstAttribute="centerX" secondItem="gwN-K4-hJv" secondAttribute="centerX" id="gsZ-dA-jJp"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="b4G-wx-ruH">
+                        <barButtonItem key="rightBarButtonItem" image="icon-cast-identified.png" id="cmI-17-WDj">
+                            <connections>
+                                <action selector="chooseDevice:" destination="his-NW-nJg" id="EAf-AO-2GA"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="googleCastButton" destination="cmI-17-WDj" id="ehE-To-4yb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dj6-yA-tsF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="755" y="296"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icon-cast-identified.png" width="24" height="24"/>
+    </resources>
+</document>
